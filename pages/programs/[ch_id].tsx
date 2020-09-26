@@ -1,4 +1,4 @@
-import Link from 'next/link';
+
 import Layout from '../../components/Layout';
 import { GetTimeTable } from '../../components/GetData';
 import styles from '../../styles/animetion.module.css';
