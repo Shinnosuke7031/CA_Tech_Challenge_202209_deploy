@@ -1,15 +1,38 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import Link from 'next/link';
+import Layout from '../components/Layout';
+import ShowChannel from '../components/ShowChannel';
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
+
+type TypeChannnel = {
+  id: string;
+  name: string;
+  url: string;
+  thumbnail: string;
+}
+interface Props {
+  channels: TypeChannnel[];
+}
+
+const IndexPage = (props: Props) => {
+
+  return (
+  <Layout title="チャンネル一覧">
+    
+    {props.channels.map((channel, index) => 
+      <ShowChannel key={index} data={channel} />
+    )}
+
   </Layout>
-)
+);}
 
-export default IndexPage
+export async function getStaticProps() {
+  const res = await fetch('https://ca-tech-challenge-web-202009.herokuapp.com/v2/channels');
+  const data = await res.json();
+  return {
+    props: { 
+      channels: data.data.channels,
+    },
+  }
+}
+
+export default IndexPage;
