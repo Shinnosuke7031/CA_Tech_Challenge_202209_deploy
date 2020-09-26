@@ -1,12 +1,7 @@
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import { GetTimeTable } from '../components/GetData';
 
 const ProgramGuide = () => {
-  const { data, isLoading, isError} = GetTimeTable();
-  if (isLoading) return <div></div>
-  if (isError) return <div>Error</div>
-  const titles = data.data.slots.map((tmp: any) => tmp.title);
   
   
   return (
