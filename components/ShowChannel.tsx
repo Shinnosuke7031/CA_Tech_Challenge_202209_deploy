@@ -1,5 +1,6 @@
 import React from 'react';
 import { GetBroadcast } from '../components/GetData';
+import styles from '../styles/animetion.module.css';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import CommentIcon from '@material-ui/icons/Comment';
 
@@ -31,7 +32,7 @@ const ShowChannel = (props: Props) => {
 
   const { data, isLoading, isError } = GetBroadcast(id);
   //if (isLoading) return <div className={styles.loader}></div>
-  if (isLoading) return <div className='_all'>Loading...</div>
+  if (isLoading) return <div className={styles.loader}></div>
   if (isError) return <div>Error</div>
   if (data.data === undefined) {
     title = '現在放送していません';
