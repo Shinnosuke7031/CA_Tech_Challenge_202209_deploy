@@ -29,3 +29,16 @@ export const GetTimeTable = (id: string | string[]) => {
   }
 
 }
+
+export const GetAllTimeTable = () => {
+  const broad_url: string = `https://ca-tech-challenge-web-202009.herokuapp.com/v2/timetable`;
+  
+  const { data, error } = useSWR(broad_url, fetcher);
+
+  return {
+    data: data,
+    isLoading: !error && !data,
+    isError: error
+  }
+
+}

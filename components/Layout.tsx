@@ -7,7 +7,7 @@ type Props = {
   title?: string
 }
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
+const Layout = ({ children, title }: Props) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -54,6 +54,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
         .all-wrapper {
           text-align: center;
           margin: 0 auto;
+          padding: 0 0 0 0;
           width: 900px;
         }
                 `}</style>
