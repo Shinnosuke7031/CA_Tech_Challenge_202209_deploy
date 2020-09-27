@@ -20,7 +20,6 @@ const IndexPage = (props: Props) => {
   return (
   <Layout title="チャンネル一覧">
 
-      {/*<Link href='/programs'><a>全番組表</a></Link>*/}
       <h1>ON AIR</h1>
 
       {props.channels.map((channel, index) => 

@@ -13,6 +13,7 @@ const Layout = ({ children, title }: Props) => (
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link rel='shortcut icon' href='https://avatars1.githubusercontent.com/u/62691711?s=400&u=09d0c70091d4b66570373f56d6364a7728a9a139&v=4' />
     </Head>
     <Header />
 
@@ -20,6 +21,17 @@ const Layout = ({ children, title }: Props) => (
     {children}
 
     </div>
+
+    <style jsx global>{`
+        ._all {
+          border: 1px solid black;
+          border-radius: 5px;
+          width: 200px;
+          text-align: center;
+          height: 100vh;
+        }
+
+      `}</style>
 
     <style jsx global>{`
         html {

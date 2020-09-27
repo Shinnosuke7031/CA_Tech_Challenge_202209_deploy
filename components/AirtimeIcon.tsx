@@ -7,7 +7,6 @@ type Props = {
 
 const AirtimeIcon: FC<Props> = (props) => {
   const num = props.num;
-  console.log(num)
   const nulls = Array(Math.floor(num*6)).fill('');
 
   return (

@@ -6,6 +6,7 @@
   height: 11em;
   border-radius: 50%;
   background: #c7c5c5;
+  background-color: #c7c5c5;;
   background: -moz-linear-gradient(left, #c7c5c5 10%, rgba(255, 255, 255, 0) 42%);
   background: -webkit-linear-gradient(left, #c7c5c5 10%, rgba(255, 255, 255, 0) 42%);
   background: -o-linear-gradient(left, #c7c5c5 10%, rgba(255, 255, 255, 0) 42%);
